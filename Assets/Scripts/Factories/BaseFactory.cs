@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Scripts.Factories
 {
-    public abstract class BaseFactory
+    public abstract class BaseFactory : IInitializable
     {
+        [Inject] private DiContainer _container;                            //Будем делать принудительный инжект создаваемых объектов, чтобы в них тоже работали Zenject зависимости
+
+
         private Dictionary<Type, GameObject> _cache = new();                //Фабрика ассетов имеет кэш. Поскольку биндится она AsTransient, для каждой сцены будет свой экземпляр фабрики и свой кэш
                                                                             //Таким образом кэш сцены уничтожается вместе со сценой и не занимает память
         public T CreateAsset<T>(bool cached = true)
@@ -20,6 +24,7 @@ namespace Assets.Scripts.Factories
             }
 
             var instance = GameObject.Instantiate(gameObject);
+            _container.InjectGameObject(instance);
 
             return instance.GetComponent<T>();                              //Возвращается экземпляр монобеха
         }
@@ -27,6 +32,11 @@ namespace Assets.Scripts.Factories
         public T CreateAssetNotCached<T>()                                  //Однако есть возможность загрузить ассет не сохраняя его в кэше, например ассет - это модель левелбосса, которую нужно загрузать ровно один раз за сцену
         {
             return CreateAsset<T>(false);
+        }
+
+        public void Initialize()
+        {
+
         }
     }
 }

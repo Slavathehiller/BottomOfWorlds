@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public interface ICharacterBattle
+public interface ICharacterBattle : ICharacter
 {
-    public string Name { get; set; }
     public int MaxHitPoints { get ; set; }
     public int CurrentHitPoints { get ; set ; }
 }

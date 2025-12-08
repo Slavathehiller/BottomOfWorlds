@@ -1,19 +1,26 @@
+using Assets.Scripts.Entity.Character;
+using Assets.Scripts.PlayerStorage;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using UnityEngine;
+using Zenject.SpaceFighter;
+
+
+public enum PlayerState
+{
+    Unresolved = -1,
+    StandingInTown = 0,
+    ReturningFromExploration = 1
+}
 
 public class Character : BaseEntity, ICharacterBattle, ICharacterSocial
 {
-    private MainStats _stats;
-    private PlayerClassInfo _classInfo;
+    private MainStats _stats = new();
+    private PlayerClassInfo _classInfo = new();
+    public PlayerState State { get; set; }
+    public PlayerStorage Storage { get; set; } = new();
+    public PlayerCart Cart { get; set; } = new();
 
-    public Character(MainStats stats, PlayerClassInfo classInfo)
+    public Character()
     {
-        _stats = stats;
-        _classInfo = classInfo;        
     }
     public int Might
     {
@@ -45,7 +52,7 @@ public class Character : BaseEntity, ICharacterBattle, ICharacterSocial
         }
     }
 
-    public override int MaxHitPoints => Might * 10; 
+    public override int MaxHitPoints => Might * 10;
 
     public void ChangeClass(Type newClass)
     {

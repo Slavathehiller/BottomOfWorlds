@@ -36,6 +36,7 @@ namespace Assets.Scripts.Factories
         public static void InitPathes()
         {
             Register(typeof(TreesGroup), "SceneAssets/Forest/TreesGroup");
+            Register(typeof(PopupText), "SceneAssets/PopupText");
         }
 
     }
