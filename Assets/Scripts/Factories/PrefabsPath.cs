@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Interfaces;
+using Assets.Scripts.SceneAssets.Mountains;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -36,7 +37,8 @@ namespace Assets.Scripts.Factories
         public static void InitPathes()
         {
             Register(typeof(TreesGroup), "SceneAssets/Forest/TreesGroup");
-            Register(typeof(PopupText), "SceneAssets/PopupText");
+            Register(typeof(RockFormation), "SceneAssets/Mountains/RockFormation");
+            Register(typeof(PopupText), "SceneAssets/PopupText");            
         }
 
     }

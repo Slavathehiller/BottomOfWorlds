@@ -10,5 +10,6 @@ public static class Scenes
     public static string MAIN_MENU = "MainMenuScene";
     public static string BATTLE_SCENE = "BattleScene";
     public static string FOREST_SCENE = "ForestScene";
+    public static string MOUNTAINS_SCENE = "MountainScene";
 }
 

@@ -1,0 +1,17 @@
+﻿using Assets.Scripts.Routines;
+using Assets.Scripts.SceneAssets.Mountains;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+public class MountainRoutine : ExplorationRoutine
+{
+    protected override void Init()
+    {
+        SpawnResourcesPoints<RockFormation>();
+    }
+}
+
