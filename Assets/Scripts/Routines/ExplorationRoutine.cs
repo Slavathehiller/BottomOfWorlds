@@ -36,7 +36,7 @@ namespace Assets.Scripts.Routines
         protected ICharacter _character;
 
         [SerializeField]
-        protected ResourceDisplayController _resourcesDisplay;
+        protected ExplorationResourceDisplay _resourcesDisplay;
 
         [Inject]
         protected IExplorationEventBus _eventBus;

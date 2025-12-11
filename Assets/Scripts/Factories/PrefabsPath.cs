@@ -38,7 +38,8 @@ namespace Assets.Scripts.Factories
         {
             Register(typeof(TreesGroup), "SceneAssets/Forest/TreesGroup");
             Register(typeof(RockFormation), "SceneAssets/Mountains/RockFormation");
-            Register(typeof(PopupText), "SceneAssets/PopupText");            
+            Register(typeof(PopupText), "SceneAssets/PopupText");
+            Register(typeof(SettingsWindow), "SceneAssets/UI/SettinglWindow");
         }
 
     }

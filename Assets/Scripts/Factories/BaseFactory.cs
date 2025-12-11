@@ -5,14 +5,21 @@ using Zenject;
 
 namespace Assets.Scripts.Factories
 {
-    public abstract class BaseFactory : IInitializable
+    public abstract class BaseFactory 
     {
-        [Inject] private DiContainer _container;                            //Будем делать принудительный инжект создаваемых объектов, чтобы в них тоже работали Zenject зависимости
+        // [Inject] private DiContainer _container;                            //Будем делать принудительный инжект создаваемых объектов, чтобы в них тоже работали Zenject зависимости
 
+        protected readonly DiContainer _container;
 
         private Dictionary<Type, GameObject> _cache = new();                //Фабрика ассетов имеет кэш. Поскольку биндится она AsTransient, для каждой сцены будет свой экземпляр фабрики и свой кэш
                                                                             //Таким образом кэш сцены уничтожается вместе со сценой и не занимает память
-        public T CreateAsset<T>(bool cached = true)
+
+        protected BaseFactory(DiContainer container)
+        {
+            _container = container ?? throw new ArgumentNullException(nameof(container)); 
+        }
+
+        protected T Create<T>(bool cached = true)
         {
             GameObject gameObject;
             if (!_cache.TryGetValue(typeof(T), out gameObject))             //Если ассет уже загружался. он берется из кэша
@@ -29,14 +36,9 @@ namespace Assets.Scripts.Factories
             return instance.GetComponent<T>();                              //Возвращается экземпляр монобеха
         }
 
-        public T CreateAssetNotCached<T>()                                  //Однако есть возможность загрузить ассет не сохраняя его в кэше, например ассет - это модель левелбосса, которую нужно загрузать ровно один раз за сцену
+        protected T CreateNotCached<T>()                                  //Однако есть возможность загрузить ассет не сохраняя его в кэше, например ассет - это модель левелбосса, которую нужно загрузать ровно один раз за сцену
         {
-            return CreateAsset<T>(false);
-        }
-
-        public void Initialize()
-        {
-
+            return Create<T>(false);
         }
     }
 }

@@ -14,7 +14,7 @@ public class ResourceDisplayController : MonoBehaviour
     private void DisplayResource(GameObject res, int amount)
     {
         var textAmount = res.GetComponentInChildren<TMP_Text>();
-        textAmount.text = amount.ToString();
+        textAmount.text = amount.To4SymbString();
         res.SetActive(amount > 0);
     }
 

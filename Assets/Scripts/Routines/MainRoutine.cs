@@ -1,8 +1,11 @@
 using Assets.Scripts.EventBus;
 using Assets.Scripts.EventBus.Interfaces;
+using Assets.Scripts.Factories;
+using Assets.Scripts.Factories.Interfaces;
 using Assets.Scripts.PlayerStorage;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
@@ -16,11 +19,15 @@ public class MainRoutine : MonoBehaviour
     private ICharacterSocial _character;
     [Inject]
     private IMainEventBus _eventBus;
+    [Inject]
+    protected IUIAssetFactory _assetFactory;
 
     [SerializeField]
     private ReturningFromExplorationWindow _returnFromExplorationWindow;
     [SerializeField]
     private ResourceDisplayController _resourcesDisplay;
+    [SerializeField]
+    private GameObject _UIcanvas;
 
     private void Awake()
     {
@@ -35,8 +42,7 @@ public class MainRoutine : MonoBehaviour
 
         if (_character.State == PlayerState.ReturningFromExploration)
         {
-            _returnFromExplorationWindow.gameObject.SetActive(true);
-            _returnFromExplorationWindow.DisplayResources(_character.Cart.Resources);
+            _returnFromExplorationWindow.Show(_character.Cart.Resources);
         }
         _resourcesDisplay.DisplayResource(_character.Storage.Resources);
     }
@@ -61,8 +67,14 @@ public class MainRoutine : MonoBehaviour
         _character.Storage.AddResources(_character.Cart.Resources);
         _character.Cart.Resources = new();
 
-        _returnFromExplorationWindow.gameObject.SetActive(false);
+        _returnFromExplorationWindow.Hide();
         _character.State = PlayerState.StandingInTown;
+    }
+
+    public void SettingsButtonClick()
+    {
+        var settingsWindow = _assetFactory.CreateAsset<SettingsWindow>(_UIcanvas);
+        settingsWindow.gameObject.SetActive(true);
     }
 
     private void OnDestroy()

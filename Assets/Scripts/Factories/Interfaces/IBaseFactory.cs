@@ -8,7 +8,7 @@ namespace Assets.Scripts.Interfaces
 {
     public interface IBaseFactory
     {
-        public T CreateAsset<T>(bool cached = true);
-        public T CreateAssetNotCached<T>();
+        public T Create<T>(bool cached = true);
+        public T CreateNotCached<T>();
     }
 }
