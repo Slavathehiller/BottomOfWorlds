@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Factories.Interfaces;
+using Assets.Scripts.UI.Interfaces;
 using UnityEngine;
 using Zenject;
 
@@ -11,10 +12,12 @@ namespace Assets.Scripts.Factories
         {
             var result = Create<T>();
 
-            result.transform.SetParent(parent.transform);
+            if (parent != null)
+                result.transform.SetParent(parent.transform);
             result.transform.localPosition = Vector3.zero;
 
             return result;
         }
+
     }
 }

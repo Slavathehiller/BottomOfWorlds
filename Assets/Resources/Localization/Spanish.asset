@@ -36,3 +36,17 @@ MonoBehaviour:
     text: DESCARGAR
   - key: TO_TOWN
     text: A LA CIUDAD
+  - key: TO_FOREST_TOOLTIP
+    text: Puedes cazar y recolectar madera en el bosque.
+  - key: TO_MOUNTAIN_TOOLTIP
+    text: "En las monta\xF1as se pueden extraer piedras, minerales y gemas."
+  - key: TO_TOWN_TOOLTIP
+    text: Regreso a la ciudad.
+  - key: WOOD_TOOLTIP
+    text: Madera
+  - key: STONE_TOOLTIP
+    text: Piedra
+  - key: TREE_TOOLTIP
+    text: "\xC1rbol"
+  - key: ROCK_TOOLTIP
+    text: Roca

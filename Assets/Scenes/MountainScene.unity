@@ -371,8 +371,9 @@ GameObject:
   - component: {fileID: 681953998}
   - component: {fileID: 681953997}
   - component: {fileID: 681953996}
+  - component: {fileID: 681953999}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ToTownButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,6 +493,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681953994}
   m_CullTransparentMesh: 1
+--- !u!114 &681953999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681953994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18532dabfde43748ade090bdf2ecfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationKey: TO_TOWN_TOOLTIP
+  _delay: 0.3
+  _UICanvas: {fileID: 116998024}
 --- !u!1 &762623503
 GameObject:
   m_ObjectHideFlags: 0

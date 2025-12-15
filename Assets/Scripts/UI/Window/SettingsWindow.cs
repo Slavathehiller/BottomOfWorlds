@@ -1,4 +1,5 @@
 using Assets.Localization.Interfaces;
+using Assets.Scripts.UI.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

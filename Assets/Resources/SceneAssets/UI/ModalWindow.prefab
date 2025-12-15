@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 662130813155297224}
   - component: {fileID: 5436485515364339542}
   m_Layer: 5
-  m_Name: UnloadButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

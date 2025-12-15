@@ -36,3 +36,17 @@ MonoBehaviour:
     text: UNLOAD
   - key: TO_TOWN
     text: TO TOWN
+  - key: TO_FOREST_TOOLTIP
+    text: You can hunt and gather wood in the forest.
+  - key: TO_MOUNTAIN_TOOLTIP
+    text: In the mountains you can mine stone, ore and gems
+  - key: TO_TOWN_TOOLTIP
+    text: Return to the town.
+  - key: WOOD_TOOLTIP
+    text: Wood
+  - key: STONE_TOOLTIP
+    text: Stone
+  - key: TREE_TOOLTIP
+    text: Tree
+  - key: ROCK_TOOLTIP
+    text: Rock

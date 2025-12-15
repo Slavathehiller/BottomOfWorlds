@@ -1,17 +1,13 @@
 ﻿using Assets.Scripts.Interfaces;
 using Assets.Scripts.PlayerStorage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Assets.Scripts.SceneAssets.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
 
 namespace Assets.Scripts.SceneAssets
 {
-    public class ResourcePoint : MonoBehaviour
+    public class ResourcePoint : DestroyableAsset
     {
         [SerializeField]
         protected Sprite _resourceIcon;
@@ -25,6 +21,7 @@ namespace Assets.Scripts.SceneAssets
         protected virtual void OnMouseDown()
         {
             Harvest?.Invoke(_resources);
+            RaiseDestroyed();
             Destroy(gameObject);
         }
 

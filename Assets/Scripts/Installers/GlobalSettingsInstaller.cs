@@ -10,7 +10,8 @@ public class GlobalSettingsInstaller : MonoInstaller
         Container.BindInterfacesTo<SceneAssetFactory>().AsTransient();
         Container.BindInterfacesTo<UIAssetFactory>().AsTransient();        
         Container.Bind<ILogger>().To<Logger>().AsCached();
-        Container.BindInterfacesTo<LocalizationManager>().AsSingle();        
+        Container.BindInterfacesTo<LocalizationManager>().AsSingle();
+        Container.BindInterfacesTo<TooltipManager>().AsSingle();        
     }
 }
 

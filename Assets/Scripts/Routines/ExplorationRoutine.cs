@@ -45,6 +45,10 @@ namespace Assets.Scripts.Routines
         {
             Init();
             _eventBus.SubscribeToHarvestResource(this, ShowResourceHarvest);
+        }
+
+        private void Start()
+        {
             _resourcesDisplay.DisplayResource(_character.Cart.Resources);
         }
 

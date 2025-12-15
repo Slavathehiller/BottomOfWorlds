@@ -25,9 +25,11 @@ public class MainRoutine : MonoBehaviour
     [SerializeField]
     private ReturningFromExplorationWindow _returnFromExplorationWindow;
     [SerializeField]
-    private ResourceDisplayController _resourcesDisplay;
+    private GameObject _resourcesDisplayHolder;
     [SerializeField]
-    private GameObject _UIcanvas;
+    private GameObject _UICanvas;
+
+    private ResourcesDisplayController _resourceDisplayController;
 
     private void Awake()
     {
@@ -44,7 +46,8 @@ public class MainRoutine : MonoBehaviour
         {
             _returnFromExplorationWindow.Show(_character.Cart.Resources);
         }
-        _resourcesDisplay.DisplayResource(_character.Storage.Resources);
+        _resourceDisplayController = _assetFactory.CreateAsset<ResourcesDisplayController>(_resourcesDisplayHolder);
+        _resourceDisplayController.DisplayResource(_character.Storage.Resources);
     }
 
     public void GoToForestButtonClick()
@@ -59,7 +62,7 @@ public class MainRoutine : MonoBehaviour
 
     private void OnResourceChanged(PlayerResources resources)
     {
-        _resourcesDisplay.DisplayResource(resources);
+        _resourceDisplayController.DisplayResource(resources);
     }
 
     public void UnloadCartClickButton()
@@ -73,7 +76,7 @@ public class MainRoutine : MonoBehaviour
 
     public void SettingsButtonClick()
     {
-        var settingsWindow = _assetFactory.CreateAsset<SettingsWindow>(_UIcanvas);
+        var settingsWindow = _assetFactory.CreateAsset<SettingsWindow>(_UICanvas);
         settingsWindow.gameObject.SetActive(true);
     }
 

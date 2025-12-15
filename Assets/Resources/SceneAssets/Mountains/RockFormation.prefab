@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 645884590405979325}
   - component: {fileID: 4957083083569409765}
   - component: {fileID: 4841132061069648585}
-  - component: {fileID: -5794919432071023958}
+  - component: {fileID: 2839270774244167335}
+  - component: {fileID: 2769378434903290825}
   m_Layer: 0
   m_Name: RockFormation
   m_TagString: Untagged
@@ -99,13 +100,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceIcon: {fileID: 21300000, guid: 5f24fd871d0e5a94cb1f848f598f3c4d, type: 3}
---- !u!65 &-5794919432071023958
-BoxCollider:
+--- !u!61 &2839270774244167335
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600884202785236911}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -114,9 +117,45 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.024, y: 1.024}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.024, y: 1.024}
+  m_EdgeRadius: 0
+--- !u!114 &2769378434903290825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600884202785236911}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.024, y: 1.024, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b33749e8a12f64eb4c0a204e91572c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationKey: ROCK_TOOLTIP
+  _delay: 0.4

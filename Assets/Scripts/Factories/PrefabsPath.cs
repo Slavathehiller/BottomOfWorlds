@@ -1,8 +1,6 @@
-﻿using Assets.Scripts.Interfaces;
-using Assets.Scripts.SceneAssets.Mountains;
+﻿using Assets.Scripts.SceneAssets.Mountains;
 using System;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 namespace Assets.Scripts.Factories
@@ -40,6 +38,9 @@ namespace Assets.Scripts.Factories
             Register(typeof(RockFormation), "SceneAssets/Mountains/RockFormation");
             Register(typeof(PopupText), "SceneAssets/PopupText");
             Register(typeof(SettingsWindow), "SceneAssets/UI/SettinglWindow");
+            Register(typeof(UITooltip), "SceneAssets/UI/UITooltip");
+            Register(typeof(SceneTooltip), "SceneAssets/SceneTooltip");           
+            Register(typeof(ResourcesDisplayController), "SceneAssets/UI/ResourcesDisplayController");
         }
 
     }

@@ -1,10 +1,11 @@
+using Assets.Scripts.UI.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using PlayerResources = Assets.Scripts.PlayerStorage.PlayerResources;
 
-public class ResourceDisplayController : MonoBehaviour
+public class ResourcesDisplayController : MonoBehaviour
 {
     [SerializeField]
     private GameObject _woodAmount;
