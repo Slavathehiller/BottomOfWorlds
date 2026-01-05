@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TreesGroup : ResourcePoint
 {
-    private void Awake()
+    protected override void GenerateResources()
     {
         _resources = new PlayerResources { Wood = Random.Range(5, 11) };
     }

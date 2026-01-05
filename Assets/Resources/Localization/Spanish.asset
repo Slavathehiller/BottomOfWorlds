@@ -50,3 +50,11 @@ MonoBehaviour:
     text: "\xC1rbol"
   - key: ROCK_TOOLTIP
     text: Roca
+  - key: TO_MINE
+    text: EN LA MINA
+  - key: TO_MINE_TOOLTIP
+    text: Bajar a la mina
+  - key: IRON_ORE_TOOLTIP
+    text: Mineral de hierro
+  - key: COAL_TOOLTIP
+    text: "Carb\xF3n"

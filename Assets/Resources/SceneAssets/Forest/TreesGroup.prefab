@@ -100,6 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceIcon: {fileID: 21300000, guid: b5b18dd60b2392646899f1b9d82bc4a1, type: 3}
+  _images:
+  - {fileID: 21300000, guid: 45627f6c2f1e45e4685808425e8b1a5e, type: 3}
+  - {fileID: 21300000, guid: b2610d523666b5849bc9eaece42615f6, type: 3}
 --- !u!61 &-1010852163952833139
 BoxCollider2D:
   m_ObjectHideFlags: 0

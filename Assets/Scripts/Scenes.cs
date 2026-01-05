@@ -11,5 +11,6 @@ public static class Scenes
     public static string BATTLE_SCENE = "BattleScene";
     public static string FOREST_SCENE = "ForestScene";
     public static string MOUNTAINS_SCENE = "MountainScene";
+    public static string MINE_SCENE = "MineScene";
 }
 

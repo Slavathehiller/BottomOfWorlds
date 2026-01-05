@@ -11,6 +11,10 @@ public class ResourcesDisplayController : MonoBehaviour
     private GameObject _woodAmount;
     [SerializeField]
     private GameObject _stoneAmount;
+    [SerializeField]
+    private GameObject _ironOreAmount;
+    [SerializeField]
+    private GameObject _coalAmount;
 
     private void DisplayResource(GameObject res, int amount)
     {
@@ -23,5 +27,7 @@ public class ResourcesDisplayController : MonoBehaviour
     {
         DisplayResource(_woodAmount, resource.Wood);
         DisplayResource(_stoneAmount, resource.Stone);
+        DisplayResource(_ironOreAmount, resource.IronOre);
+        DisplayResource(_coalAmount, resource.Coal);
     }
 }

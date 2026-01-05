@@ -36,11 +36,15 @@ namespace Assets.Scripts.Factories
         {
             Register(typeof(TreesGroup), "SceneAssets/Forest/TreesGroup");
             Register(typeof(RockFormation), "SceneAssets/Mountains/RockFormation");
+            Register(typeof(RockFormationWithIronOre), "SceneAssets/Mountains/RockFormationWithIronOre");
+            Register(typeof(RockFormationWithCoal), "SceneAssets/Mountains/RockFormationWithCoal");            
             Register(typeof(PopupText), "SceneAssets/PopupText");
             Register(typeof(SettingsWindow), "SceneAssets/UI/SettinglWindow");
             Register(typeof(UITooltip), "SceneAssets/UI/UITooltip");
             Register(typeof(SceneTooltip), "SceneAssets/SceneTooltip");           
             Register(typeof(ResourcesDisplayController), "SceneAssets/UI/ResourcesDisplayController");
+
+            
         }
 
     }

@@ -8,6 +8,7 @@ namespace Assets.Scripts.PlayerStorage
         public int Wood {  get; set; }
         public int Stone {  get; set; }
         public int IronOre {  get; set; }
+        public int Coal { get; set; }
 
         public static PlayerResources operator +(PlayerResources resources1, PlayerResources resources2)
         {

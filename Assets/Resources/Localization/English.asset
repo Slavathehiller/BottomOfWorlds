@@ -50,3 +50,11 @@ MonoBehaviour:
     text: Tree
   - key: ROCK_TOOLTIP
     text: Rock
+  - key: TO_MINE
+    text: TO MINE
+  - key: TO_MINE_TOOLTIP
+    text: Go down into the mine
+  - key: IRON_ORE_TOOLTIP
+    text: Iron ore
+  - key: COAL_TOOLTIP
+    text: Coal
