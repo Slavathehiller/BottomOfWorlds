@@ -60,6 +60,11 @@ public class MainRoutine : MonoBehaviour
         SceneManager.LoadScene(Scenes.MOUNTAINS_SCENE);
     }
 
+    public void GoToTownButtonClick()
+    {
+        SceneManager.LoadScene(Scenes.TOWN_SCENE);
+    }
+
     private void OnResourceChanged(PlayerResources resources)
     {
         _resourceDisplayController.DisplayResource(resources);
@@ -82,6 +87,7 @@ public class MainRoutine : MonoBehaviour
 
     private void OnDestroy()
     {
+        _character.Storage.OnPlayerResourcesChanged -= _eventBus.OnChangeResource;
         _eventBus.UnsubscribeAll();
     }
 }

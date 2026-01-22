@@ -1,1 +1,3 @@
 Art for 2d game. No Background. (Fantasy Art)
+
+A seamless tileable 2D texture pattern of ---- Insert your prompt here ---- top-down flat view, perfectly tileable without edges, highly detailed leaf and brickwork, soft natural lighting, masterpiece, ultra-detailed, sharp focus,

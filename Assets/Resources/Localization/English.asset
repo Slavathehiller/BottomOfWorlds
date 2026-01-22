@@ -58,3 +58,19 @@ MonoBehaviour:
     text: Iron ore
   - key: COAL_TOOLTIP
     text: Coal
+  - key: RETURN
+    text: RETURN
+  - key: RETURN_TOOLTIP
+    text: Return
+  - key: TOWN
+    text: TOWN
+  - key: ENTER_TO_TOWN_TOOLTIP
+    text: Enter to town
+  - key: GET_OUT
+    text: GET OUT
+  - key: GET_OUT_OF_MINE_TOOLTIP
+    text: Get out of the mine
+  - key: LIVING_QUARTAL
+    text: Residential area
+  - key: CASTLE
+    text: Castle

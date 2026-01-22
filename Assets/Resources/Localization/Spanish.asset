@@ -58,3 +58,19 @@ MonoBehaviour:
     text: Mineral de hierro
   - key: COAL_TOOLTIP
     text: "Carb\xF3n"
+  - key: RETURN
+    text: DEVOLVER
+  - key: RETURN_TOOLTIP
+    text: Devolver
+  - key: TOWN
+    text: LA CIUDAD
+  - key: ENTER_TO_TOWN_TOOLTIP
+    text: Entrar a la ciudad
+  - key: GET_OUT
+    text: SALIR
+  - key: GET_OUT_OF_MINE_TOOLTIP
+    text: Sal de la mina
+  - key: LIVING_QUARTAL
+    text: Barrio residencial
+  - key: CASTLE
+    text: Castillo

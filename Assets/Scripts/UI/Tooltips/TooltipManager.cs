@@ -8,7 +8,8 @@ public class TooltipManager : ITooltipManager
 {
     private UITooltip _currentUITooltip;
     private SceneTooltip _currentSceneTooltip;
-    private TextMeshProUGUI _textComponent;
+    private TextMeshProUGUI _UITextComponent;
+    private TextMeshProUGUI _sceneTextComponent;
 
     [Inject]
     private IUIAssetFactory _assetFactory;
@@ -19,12 +20,12 @@ public class TooltipManager : ITooltipManager
         if (_currentUITooltip == null)
         {
             _currentUITooltip = _assetFactory.CreateAsset<UITooltip>(parent);
-            _textComponent = _currentUITooltip.GetComponentInChildren<TextMeshProUGUI>();
+            _UITextComponent = _currentUITooltip.GetComponentInChildren<TextMeshProUGUI>();
         }
         else
             _currentUITooltip.transform.SetParent(parent.transform);
 
-        _textComponent.text = text;
+        _UITextComponent.text = text;
         _currentUITooltip.gameObject.SetActive(true);
 
         var size = _currentUITooltip.GetComponent<RectTransform>().rect.size;
@@ -42,10 +43,10 @@ public class TooltipManager : ITooltipManager
         if (_currentSceneTooltip == null)
         {
             _currentSceneTooltip = _assetFactory.CreateAsset<SceneTooltip>(null);
-            _textComponent = _currentSceneTooltip.GetComponentInChildren<TextMeshProUGUI>();
+            _sceneTextComponent = _currentSceneTooltip.GetComponentInChildren<TextMeshProUGUI>();
         }
 
-        _textComponent.text = text;
+        _sceneTextComponent.text = text;
         _currentSceneTooltip.gameObject.SetActive(true);
 
         var rectTransform = _currentSceneTooltip.GetComponent<RectTransform>();

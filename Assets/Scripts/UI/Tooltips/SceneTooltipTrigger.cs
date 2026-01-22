@@ -10,7 +10,6 @@ namespace Assets.Scripts.UI.Tooltips
     public class SceneTooltipTrigger : MonoBehaviour
     {
         [SerializeField] private string _localizationKey;
-        [SerializeField] private float _delay = 0.4f;
 
         [Inject]
         private ITooltipManager _tooltipManager;
